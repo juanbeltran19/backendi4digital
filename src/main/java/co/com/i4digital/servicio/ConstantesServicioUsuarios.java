@@ -4,9 +4,9 @@
  * Todos los derechos reservados.
  */
 package co.com.i4digital.servicio;
+
 /**
- * Clase que define constantes urls de 
- * la api del servicio rest externo 
+ * Clase que define constantes urls de la api del servicio rest externo
  *
  * @version
  * @author juanpbeltran <br>
@@ -19,8 +19,8 @@ public class ConstantesServicioUsuarios {
 	public static final String CONST_URL_FOTO = "https://jsonplaceholder.typicode.com/photos/";
 	public static final String CONST_METODO_HTTP = "GET";
 	public static final String CONST_ACCEPT = "Accept";
-	public static final String CONST_JSON =  "application/json";
-	public static final String CONST_LOG_USUARIO= "USUARIOS";
+	public static final String CONST_JSON = "application/json";
+	public static final String CONST_LOG_USUARIO = "USUARIOS";
 	public static final String CONST_LOG_PUBLICACIONES = "PUBLICACIONES";
 	public static final String CONST_LOG_FOTOS = "FOTOS";
 }

@@ -22,15 +22,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * Clase que se encarga de iniciar la aplicacion
  *
  * @version
- * @author juanpbeltran
- * <br><b>Fecha de desarrollo : </b> 24/04/2021
- * <br><b>Fecha de modificación : </b> 00/00/0000
+ * @author juanpbeltran <br>
+ *         <b>Fecha de desarrollo : </b> 24/04/2021 <br>
+ *         <b>Fecha de modificación : </b> 00/00/0000
  */
 @SpringBootApplication
 @EnableTransactionManagement
 @EnableJpaRepositories("co.com.i4digital.repositorio")
 @EntityScan("co.com.i4digital.modelo")
-@ComponentScan(basePackages = "co.com.i4digital") 
+@ComponentScan(basePackages = "co.com.i4digital")
 @Configuration
 public class DemoApplication {
 
@@ -39,15 +39,13 @@ public class DemoApplication {
 	}
 
 	@Bean
-    public WebMvcConfigurer CORSConfigurer(){
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("*")
-                        .allowedMethods("GET");
-            }
-        };
-    }	
-	
+	public WebMvcConfigurer CORSConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*").allowedMethods("GET");
+			}
+		};
+	}
+
 }

@@ -15,43 +15,43 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 
-
 /**
- * Clase modelo que se encarga de persistir la informacion de la trazabilidad 
- * de cada ejecucion por el cliente de la aplicacion
+ * Clase modelo que se encarga de persistir la informacion de la trazabilidad de
+ * cada ejecucion por el cliente de la aplicacion
  *
  * @version
- * @author juanpbeltran
- * <br><b>Fecha de desarrollo : </b> 24/04/2021
- * <br><b>Fecha de modificación : </b> 00/00/0000
+ * @author juanpbeltran <br>
+ *         <b>Fecha de desarrollo : </b> 24/04/2021 <br>
+ *         <b>Fecha de modificación : </b> 00/00/0000
  */
 
 @Entity
-@Table(name="LOGSUSUARIOS")
+@Table(name = "LOGSUSUARIOS")
 public class TransaccionesUsuarios {
-	
+
 	@Id
-	@Column(name="id_transaccionusuario")
-	private Integer idTransaccionUsuario;	
-	
-	@Column(name="resultado")
+	@Column(name = "id_transaccionusuario")
+	private Integer idTransaccionUsuario;
+
+	@Column(name = "resultado")
 	private String resultado;
-	
-	@Column(name="fecha")
+
+	@Column(name = "fecha")
 	private String fecha;
-	
-	@Column(name="servicio")
-	private String servicio;	
-	
+
+	@Column(name = "servicio")
+	private String servicio;
+
 	public TransaccionesUsuarios() {
 		DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 		Date date = new Date();
-		this.fecha = LocalDate.now().toString() + dateFormat.format(date); 		
+		this.fecha = LocalDate.now().toString() + dateFormat.format(date);
 	}
-	
+
 	public String getResultado() {
 		return resultado;
 	}
+
 	/**
 	 * @param resultado the resultado to set
 	 */
@@ -62,13 +62,14 @@ public class TransaccionesUsuarios {
 	public Integer getIdTransaccionUsuario() {
 		return idTransaccionUsuario;
 	}
+
 	/**
 	 * @param idTransaccionUsuario the idTransaccionUsuario to set
 	 */
 	public void setIdTransaccionUsuario(Integer idTransaccionUsuario) {
 		this.idTransaccionUsuario = idTransaccionUsuario;
-	}	
-	
+	}
+
 	public String getFecha() {
 		return fecha;
 	}
@@ -83,6 +84,6 @@ public class TransaccionesUsuarios {
 
 	public void setServicio(String servicio) {
 		this.servicio = servicio;
-	}	
+	}
 
 }
